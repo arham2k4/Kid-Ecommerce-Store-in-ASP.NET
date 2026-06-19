@@ -1,0 +1,31 @@
+@model IEnumerable<ECommerceMVC.Models.Product>
+
+<div class="row">
+
+@foreach(var item in Model)
+{
+<div class="col-md-3">
+
+<div class="card product-card">
+
+<img src="@item.ImageUrl">
+
+<div class="card-body">
+
+<h5>@item.Name</h5>
+
+<p>$@item.Price</p>
+
+<a href="/Products/Details/@item.Id"
+class="btn btn-success">
+Details
+</a>
+
+</div>
+
+</div>
+
+</div>
+}
+
+</div>
